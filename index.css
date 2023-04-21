@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* -paragraphs */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* -background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+p{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  color: var(--transparent-white);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 380px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--transparent-white);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+img{
+  margin: 0 0 1.25rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1.85rem;
+  border-radius: 1.25rem;
+  background-color: var(--very-light-gray);
+  cursor: pointer;
+  border: 2px solid var(--very-light-gray);
+}
+
+.card:first-child button {
+  color: var(--bright-orange);
+}
+
+.card:first-child button:hover {
+  color: var(--very-light-gray);
+  background: transparent;
+}
+
+.card:nth-child(2) button {
+  color: var(--dark-cyan);
+}
+
+.card:nth-child(2) button:hover {
+  color: var(--very-light-gray);
+  background: transparent;
+}
+
+.card:last-child button {
+  color: var(--very-dark-cyan);
+}
+
+.card:last-child button:hover {
+  color: var(--very-light-gray);
+  background: transparent;
+}
+
+.card {
+  padding: 3.5rem 3rem 3rem;
+  min-height: 300px;
+}
+
+.card:first-child {
+  background-color: var(--bright-orange);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    height: 100vh;
+    max-width: 1000px;
+    margin: auto;
+    place-items: center;
+  }
+
+  .card{
+    height: 450px;
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-rows: 20% 15% auto 15%;
+  }
+
+  .card:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .card:last-child {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .btn button {
+    padding: 0.6rem 2.5rem;
+  }
+
+}
